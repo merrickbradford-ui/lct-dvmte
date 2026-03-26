@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Hiking Trails</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <h1>Nearby Hiking Trails</h1>
+        <button id="locateBtn">Find My Location</button>
+    </header>
+    
+    <main>
+        <section id="mapSection">
+            <div id="trailMap"></div>
+        </section>
+        
+        <section id="trailsList">
+            <h2>Available Trails</h2>
+            <div id="trailsContainer">
+                <!-- Trail articles will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Hiking Trails Explorer</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

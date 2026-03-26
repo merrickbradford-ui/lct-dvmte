@@ -1,0 +1,109 @@
+:root {
+    --primary-color: #2F4F4F;
+    --bg-color: #f8f9fa;
+    --text-color: #333;
+    --accent-color: #4a90e2;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+#locateBtn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#locateBtn:hover {
+    opacity: 0.9;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+#mapSection {
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#trailMap {
+    height: 100%;
+    width: 100%;
+}
+
+#trailsList h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+#trailsContainer {
+    display: grid;
+    gap: 1rem;
+}
+
+article {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-left: 4px solid var(--primary-color);
+}
+
+article h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 2rem;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+    
+    #mapSection {
+        flex: 1;
+        height: 500px;
+    }
+    
+    #trailsList {
+        flex: 1;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>附近学校查询</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>附近学校查询</h1>
+    <p>点击下方按钮获取您当前位置附近的学校</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <button id="locateBtn">定位并查找学校</button>
+      <div id="status" class="status"></div>
+    </section>
+
+    <section class="map-container">
+      <div id="map"></div>
+    </section>
+
+    <section class="schools-list" id="schoolsList">
+      <!-- 学校列表将在此处动态生成 -->
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 学校查询服务 | 数据来源于开放地理信息</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

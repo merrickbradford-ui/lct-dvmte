@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrailFinder - Discover Nearby Hiking Routes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <h1>TrailFinder</h1>
+        <p>Discover the best hiking trails near you</p>
+    </header>
+
+    <main>
+        <section id="controls">
+            <button id="locate-btn">Find Trails Near Me</button>
+            <div id="location-status"></div>
+        </section>
+
+        <section id="map-container">
+            <div id="trail-map"></div>
+        </section>
+
+        <section id="trails-list">
+            <h2>Nearby Trails</h2>
+            <div id="trails-cards">
+                <!-- Trail cards will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TrailFinder. Explore responsibly.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

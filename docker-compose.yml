@@ -1,0 +1,41 @@
+services:
+  mcp-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: devmate-mcp-server
+    command:
+      [
+        "uv",
+        "run",
+        "--project",
+        "/app/mcp_server",
+        "mcp-server",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "9000",
+        "--mount-path",
+        "/mcp",
+        "--config",
+        "/app/config.docker.toml",
+      ]
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./:/app
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: devmate-app
+    command: ["uv", "run", "--project", "/app/devmate_app", "devmate-web"]
+    ports:
+      - "8080:8080"
+    environment:
+      - DEVMATE_CONFIG=/app/config.docker.toml
+    volumes:
+      - ./:/app
+    depends_on:
+      - mcp-server

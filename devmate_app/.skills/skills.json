@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Hiking Trail Website with FastAPI and Leaflet",
+    "trigger": "build hiking trail website",
+    "pattern": "Created a FastAPI backend with proper router/service separation following internal guidelines, implemented OAuth2 security, and built a frontend with Leaflet maps using Dark Slate Gray branding and semantic HTML5 trail articles."
+  },
+  {
+    "title": "Hiking Trails Website with Mapbox/Leaflet Integration",
+    "trigger": "build hiking trail website with maps",
+    "pattern": "Created a FastAPI backend with proper router/service separation and OAuth2 security, plus a frontend using Leaflet with Mapbox tiles for displaying hiking trails from GPX files. Implemented semantic HTML5 articles for trail entries and used the required CSS variables for branding."
+  }
+]

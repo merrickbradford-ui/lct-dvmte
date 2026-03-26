@@ -1,0 +1,14 @@
+.git
+.venv
+.uv-cache
+.data
+.ruff_cache
+__pycache__
+**/__pycache__
+**/.venv
+**/.pytest_cache
+**/.mypy_cache
+workspace_output
+*.pyc
+*.pyo
+*.pyd

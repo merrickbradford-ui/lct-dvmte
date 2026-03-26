@@ -1,0 +1,68 @@
+# DevMate 配置模板（提交到仓库）
+# 复制本文件为 config.toml 并填写真实的 API 密钥
+
+[model]
+# 主对话模型 API 地址（支持 OpenAI 兼容接口）
+ai_base_url = "https://api.openai.com/v1"
+# 主对话模型鉴权密钥
+api_key = "your_model_api_key"
+# 主对话模型名称
+model_name = "gpt-4o-mini"
+# Embedding 模型名称（使用 OpenAI-compatible API）
+embedding_model_name = "text-embedding-3-small"
+# Embedding 模型 API 地址（留空则使用 ai_base_url）
+embedding_base_url = ""
+# Embedding 模型鉴权密钥（留空则使用 api_key）
+embedding_api_key = ""
+# LLM 推理温度
+temperature = 0.1
+
+[search]
+# Tavily 搜索服务 API 密钥
+tavily_api_key = "your_tavily_api_key"
+# 每次搜索返回的最大结果数
+max_results = 5
+
+[langsmith]
+# 是否启用 LangSmith 链路追踪
+langchain_tracing_v2 = true
+# LangSmith API 密钥
+langchain_api_key = "your_langsmith_api_key"
+# LangSmith 项目名
+langchain_project = "devmate"
+# LangSmith API 地址
+langchain_endpoint = "https://api.smith.langchain.com"
+
+[skills]
+# Skills 存储目录（相对于 config.toml 所在目录）
+skills_dir = ".skills"
+# 搜索技能时返回的最大匹配数
+top_k = 3
+
+[rag]
+# 本地文档目录（相对于 config.toml 所在目录）
+docs_dir = "devmate_app/docs"
+# Chroma 向量集合名
+collection_name = "devmate_docs"
+# 文档分块大小（字符数）
+chunk_size = 800
+# 文档分块重叠大小（字符数）
+chunk_overlap = 120
+# Chroma 向量库持久化目录（相对于 config.toml 所在目录）
+persist_dir = ".data/chroma"
+
+[mcp]
+# MCP Server 的 Streamable HTTP 地址
+server_url = "http://localhost:9000/mcp"
+# MCP Server 监听地址（容器内使用 0.0.0.0）
+host = "0.0.0.0"
+# MCP Server 监听端口
+port = 9000
+
+[app]
+# Agent 生成文件的输出目录（相对于 config.toml 所在目录）
+workspace_output_dir = "workspace_output"
+# Web UI 监听地址
+host = "0.0.0.0"
+# Web UI 监听端口
+port = 8080

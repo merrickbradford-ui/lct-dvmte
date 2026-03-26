@@ -1,0 +1,134 @@
+:root {
+    --primary-color: #2F4F4F;
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --accent-color: #4682b4;
+    --card-bg: #ffffff;
+    --border-color: #ddd;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+#controls {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+#locate-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#locate-btn:hover {
+    background-color: var(--primary-color);
+}
+
+#location-status {
+    margin-top: 0.75rem;
+    font-style: italic;
+    color: var(--primary-color);
+}
+
+#map-container {
+    height: 400px;
+    width: 100%;
+}
+
+#trail-map {
+    height: 100%;
+    width: 100%;
+    border: 1px solid var(--border-color);
+}
+
+#trails-list {
+    padding: 1.5rem;
+}
+
+#trails-list h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+#trails-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.trail-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.trail-card:hover {
+    transform: translateY(-5px);
+}
+
+.trail-card h3 {
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.25rem;
+}
+
+.trail-info {
+    padding: 1rem;
+}
+
+.trail-info p {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #trail-map {
+        height: 300px;
+    }
+
+    #trails-cards {
+        grid-template-columns: 1fr;
+    }
+}

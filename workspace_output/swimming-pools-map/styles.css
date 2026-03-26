@@ -1,0 +1,201 @@
+:root {
+    --primary-color: #2F4F4F; /* Dark Slate Gray - mandatory branding */
+    --bg-color: #f8f9fa;
+    --text-color: #333;
+    --accent-color: #4CAF50;
+    --card-bg: #ffffff;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), #4a6b6b);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.controls {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: #1e3a3a;
+}
+
+.status-message {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.status-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.map-container {
+    height: 400px;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.pools-list {
+    margin-top: 2rem;
+}
+
+.pools-list h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.pools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.pool-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px var(--shadow-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pool-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.pool-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.pool-card .address {
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.pool-card .details {
+    margin-top: 1rem;
+}
+
+.pool-card .detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+}
+
+.pool-card .distance {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .map-container {
+        height: 300px;
+    }
+    
+    .pools-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    main {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1.5rem 0.5rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .map-container {
+        height: 250px;
+    }
+    
+    .pool-card {
+        padding: 1rem;
+    }
+}

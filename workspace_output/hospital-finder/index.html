@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>附近医院路线导航</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://api.map.baidu.com/api?v=1.0&type=webgl&ak=您的百度地图AK"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏥 附近医院路线导航</h1>
+            <p>快速找到最近的医院并获取最佳路线</p>
+        </header>
+        
+        <div class="controls">
+            <button id="locateBtn" class="btn-primary">📍 获取我的位置</button>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索医院名称...">
+                <button id="searchBtn">🔍 搜索</button>
+            </div>
+        </div>
+        
+        <div class="map-container" id="mapContainer">
+            <!-- 地图将在这里加载 -->
+        </div>
+        
+        <div class="results-panel">
+            <h3>附近医院</h3>
+            <div id="hospitalsList" class="hospitals-list">
+                <p class="placeholder-text">点击"获取我的位置"开始查找附近医院</p>
+            </div>
+        </div>
+        
+        <div class="route-panel" id="routePanel" style="display: none;">
+            <h3>路线信息</h3>
+            <div id="routeInfo"></div>
+            <button id="closeRouteBtn" class="btn-secondary">关闭路线</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

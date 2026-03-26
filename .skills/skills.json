@@ -1,0 +1,127 @@
+[
+  {
+    "title": "创建徒步路线展示网站",
+    "trigger": "构建一个展示附近徒步路线的网站项目",
+    "pattern": "1. 调用 search_web 获取徒步网站设计最佳实践；2. 调用 search_knowledge_base 获取内部前端规范；3. 创建 hiking-site 目录；4. 生成 index.html（含 Leaflet 地图容器）、styles.css（响应式样式）、app.js（含定位与模拟路线逻辑）；5. 使用 OpenStreetMap 和 Leaflet 实现地图功能。"
+  },
+  {
+    "title": "附近餐厅展示网站",
+    "trigger": "构建一个展示附近餐厅的网站项目",
+    "pattern": "使用 Leaflet + OpenStreetMap + Overpass API 实现基于用户位置的餐厅地图展示，包含定位、加载提示、错误处理和响应式布局。"
+  },
+  {
+    "title": "Simple Command-Line Calculator in Python",
+    "trigger": "user requests a calculator tool",
+    "pattern": "Create a command-line calculator with functions for basic arithmetic operations (+, -, *, /). Include input validation, error handling for division by zero, and a loop for continuous operation. Structure the code with separate functions for each operation, input parsing, and operation selection."
+  },
+  {
+    "title": "Restaurant Finder Web Application",
+    "trigger": "build restaurant finder website",
+    "pattern": "Created a FastAPI backend with restaurant data model, service layer for nearby search, and Leaflet-based frontend with semantic HTML5 articles for restaurant listings. Follows internal guidelines with separated routers/services, Mapbox/Leaflet instead of Google Maps, and Dark Slate Gray primary color."
+  },
+  {
+    "title": "Hiking Trails Website with Leaflet.js",
+    "trigger": "构建展示附近徒步路线的网站项目",
+    "pattern": "创建包含HTML5语义化结构、CSS3自定义属性（含--primary-color: #2F4F4F）、Leaflet.js地图集成、OpenStreetMap瓦片、用户地理定位功能和响应式徒步路线卡片的静态网站。使用纯前端技术，无需后端。"
+  },
+  {
+    "title": "Tiny FastAPI Project Scaffold",
+    "trigger": "Build a tiny FastAPI project scaffold",
+    "pattern": "Create a minimal FastAPI project with uv using the create_python_uv_project_scaffold tool, then ensure proper structure with app/main.py, app/routers/, app/services/, and a comprehensive README.md with setup and run instructions."
+  },
+  {
+    "title": "Add Health Endpoint to FastAPI Project",
+    "trigger": "Add a health endpoint to a FastAPI project",
+    "pattern": "To add a health endpoint to an existing FastAPI project: 1) Create a health.py router in the app/routers directory with a health_check function that returns a status dictionary, 2) Import and include the router in main.py, 3) Update the README.md to document the new endpoint."
+  },
+  {
+    "title": "Hiking Trails Website with Leaflet.js",
+    "trigger": "build hiking trail website with map",
+    "pattern": "Create a static website for hiking trails using Leaflet.js and OpenStreetMap. Structure includes: 1) HTML5 semantic structure with header, main sections for map and trails, footer; 2) CSS with --primary-color: #2F4F4F, responsive grid layout; 3) JavaScript with sample trail data, user geolocation via navigator.geolocation, interactive map markers, and trail list with view-on-map functionality; 4) README with setup instructions and technical details."
+  },
+  {
+    "title": "Minimal FastAPI Project Structure",
+    "trigger": "create minimal FastAPI project",
+    "pattern": "Use create_python_uv_project_scaffold with standard app structure including routers/, services/, proper type hints, and README with uv instructions."
+  },
+  {
+    "title": "FastAPI Minimal Project Structure",
+    "trigger": "Create minimal FastAPI project",
+    "pattern": "Create Python uv scaffold with proper app structure, routers/services separation, type hints, and comprehensive README with setup instructions."
+  },
+  {
+    "title": "Minimal FastAPI Project with uv",
+    "trigger": "create minimal FastAPI project",
+    "pattern": "Use create_python_uv_project_scaffold to generate a FastAPI project with proper structure including routers/, services/, pyproject.toml, and README.md following internal guidelines."
+  },
+  {
+    "title": "Restaurant Finder Web Application",
+    "trigger": "build restaurant finder with geolocation and map display",
+    "pattern": "Create a complete frontend web application for finding nearby restaurants using:\n1. HTML5 semantic structure with header, main, section, article, footer\n2. CSS with root variables including --primary-color: #2F4F4F\n3. Leaflet.js for interactive maps with OpenStreetMap tiles\n4. Geolocation API to get user's current location\n5. Vanilla JavaScript ES6+ class-based architecture\n6. Mock restaurant data with distance calculation using Haversine formula\n7. Responsive grid layout that works on mobile and desktop\n8. Loading states and error handling for geolocation\n9. Interactive markers that link to restaurant cards and vice versa"
+  },
+  {
+    "title": "Hiking Trail Website with Leaflet.js",
+    "trigger": "build hiking trail map website",
+    "pattern": "Create a static website with HTML5 semantic structure, CSS with root variables including --primary-color: #2F4F4F, and Leaflet.js integration for OpenStreetMap. Include user geolocation button, responsive design with flexbox/grid, and sample trail data rendered as article cards."
+  },
+  {
+    "title": "Nearby Restaurants Finder Web Application",
+    "trigger": "build restaurant finder with geolocation and interactive map display",
+    "pattern": "Create a complete frontend web application for finding nearby restaurants using:\n1. HTML5 semantic structure with header, main, section, article, footer\n2. CSS with root variables including --primary-color: #2F4F4F (Dark Slate Gray)\n3. Leaflet.js for interactive maps with OpenStreetMap tiles\n4. Geolocation API to get user's current location with proper error handling\n5. Vanilla JavaScript ES6+ class-based architecture with modular methods\n6. Mock restaurant data with realistic coordinates and details\n7. Distance calculation using Haversine formula\n8. Responsive grid layout that adapts to mobile and desktop\n9. Interactive features: click markers/cards to highlight and pan to locations\n10. Loading states, error messages, and retry functionality\n11. Custom marker icons with rating-based colors\n12. Restaurant sorting by distance from user location"
+  },
+  {
+    "title": "Hiking Trail Website with Leaflet.js",
+    "trigger": "build hiking trail website with maps",
+    "pattern": "Create a static website for hiking trails using semantic HTML5, CSS with custom properties (including --primary-color: #2F4F4F), and Leaflet.js with OpenStreetMap for interactive maps. Include geolocation functionality, responsive design with Flexbox/Grid, and sample trail data rendered as article cards."
+  },
+  {
+    "title": "Hiking Trails Website with Leaflet.js",
+    "trigger": "构建展示附近徒步路线的网站项目",
+    "pattern": "创建一个使用 Leaflet.js 和 OpenStreetMap 的静态网站，包含响应式设计、地理定位功能和徒步路线卡片展示。遵循语义化 HTML5 结构，使用 CSS 自定义属性设置 Dark Slate Gray (#2F4F4F) 为主色调，并实现移动优先的响应式布局。"
+  },
+  {
+    "title": "Hiking Trails Website with Leaflet.js",
+    "trigger": "build hiking trail map website",
+    "pattern": "Create a static website with HTML5, CSS3 (using --primary-color: #2F4F4F), and vanilla JavaScript that uses Leaflet.js with OpenStreetMap tiles to display hiking trails. Include geolocation functionality, responsive design with semantic HTML5 elements (article for trails), and sample trail data with markers on the map."
+  },
+  {
+    "title": "Hiking Trails Website with Leaflet Maps",
+    "trigger": "hiking trail website with maps",
+    "pattern": "Create a responsive hiking trails website using HTML5 semantic elements, CSS with --primary-color: #2F4F4F, and Leaflet.js for interactive maps. Include geolocation functionality, trail listings in article elements, and sample trail data with coordinates. Structure includes index.html, styles.css, script.js, and README.md."
+  },
+  {
+    "title": "Hiking Trails Website with Leaflet.js",
+    "trigger": "build hiking trail website",
+    "pattern": "Create a responsive hiking trails website using HTML5, CSS3 with custom properties (including --primary-color: #2F4F4F), and JavaScript with Leaflet.js for maps. Structure includes semantic HTML5 elements (header, main, article for trails), mobile-first CSS with grid layout, and sample trail data displayed on an interactive OpenStreetMap. Include geolocation functionality and proper README documentation."
+  },
+  {
+    "title": "Hiking Trails Website with Leaflet.js",
+    "trigger": "hiking trail map website",
+    "pattern": "Create a responsive hiking trails website using HTML5, CSS3 with custom properties (including --primary-color: #2F4F4F), and vanilla JavaScript. Implement interactive maps with Leaflet.js and OpenStreetMap tiles. Include geolocation functionality to find user's location. Structure content with semantic HTML5 elements like <article> for trail entries. Follow mobile-first responsive design principles."
+  },
+  {
+    "title": "Hiking Trails Website with Leaflet Maps",
+    "trigger": "build hiking trail website with maps",
+    "pattern": "Create a responsive hiking trails website using Leaflet.js for interactive maps, OpenStreetMap tiles, and Geolocation API for user location. Structure includes semantic HTML5 with article elements for trails, CSS with Dark Slate Gray primary color, and vanilla JavaScript for dynamic content loading."
+  },
+  {
+    "title": "Restaurant Finder Web App with Leaflet.js",
+    "trigger": "restaurant finder map display",
+    "pattern": "Create a single-page restaurant finder web application using Leaflet.js for map display and OpenStreetMap tiles. Include user geolocation functionality, restaurant markers with popups, and a sidebar list of restaurants that can be clicked to center the map on that location. Use CSS variables with --primary-color: #2F4F4F for consistent branding. Implement responsive design with flexbox layout."
+  },
+  {
+    "title": "Gym Finder Web App with Leaflet.js",
+    "trigger": "gym finder map display",
+    "pattern": "Create a single-page gym finder web application using Leaflet.js for map display and OpenStreetMap tiles. Include user geolocation functionality, gym markers with custom fitness icons (🏋️), and a sidebar list of gyms that can be clicked to center the map on that location. Display gym details including name, address, rating, price, and facilities. Use CSS variables with --primary-color: #2F4F4F for consistent branding. Implement responsive design with flexbox layout."
+  },
+  {
+    "title": "游泳馆地图展示网站",
+    "trigger": "构建附近游泳馆的网页并展示",
+    "pattern": "创建一个使用Leaflet.js和OpenStreetMap的响应式网页应用，包含以下组件：\n1. HTML5语义化结构（header, main, section, article, footer）\n2. CSS自定义变量（--primary-color: #2F4F4F）\n3. 地理位置API集成用于用户定位\n4. 模拟游泳馆数据数组\n5. 距离计算功能（Haversine公式）\n6. 动态卡片列表展示\n7. 交互式地图标记和弹窗\n8. 响应式设计支持移动设备\n9. 状态消息反馈系统\n10. 完整的README文档"
+  },
+  {
+    "title": "Hiking Trail Recommender Website",
+    "trigger": "build hiking trail recommendation website",
+    "pattern": "Create a frontend-only hiking trail recommendation website using Leaflet.js and OpenStreetMap. Include geolocation functionality, responsive design with CSS Grid, semantic HTML5 elements (article for trail cards), and Dark Slate Gray (#2F4F4F) as primary color. Structure includes index.html, styles.css, script.js, and README.md."
+  }
+]
