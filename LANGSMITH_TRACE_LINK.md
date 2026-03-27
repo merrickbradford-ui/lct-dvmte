@@ -1,3 +1,3 @@
 # Latest LangSmith Trace
 
-https://smith.langchain.com/public/27a7c5d7-2994-489f-a180-897edd039e64/r
+https://smith.langchain.com/public/22f735f3-28aa-4017-adba-841feab3a295/r
