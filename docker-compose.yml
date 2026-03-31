@@ -35,6 +35,10 @@ services:
       - "8080:8080"
     environment:
       - DEVMATE_CONFIG=/app/config.docker.toml
+      - LANGCHAIN_TRACING_V2=true
+      - LANGCHAIN_API_KEY=your_langsmith_api_key
+      - LANGCHAIN_PROJECT=devmate
+      - LANGCHAIN_ENDPOINT=https://api.smith.langchain.com
     volumes:
       - ./:/app
     depends_on:

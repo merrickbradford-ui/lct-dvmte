@@ -22,11 +22,11 @@ skills_dir = ".skills"
 top_k = 3
 
 [rag]
-docs_dir = "devmate_app/docs"
+docs_dir = "D:/DevMate/devmate_app/docs"
 collection_name = "devmate_docs"
 chunk_size = 800
 chunk_overlap = 120
-persist_dir = ".data/chroma"
+persist_dir = "D:/DevMate/.data/chroma"
 
 [mcp]
 server_url = "http://127.0.0.1:9000/mcp"
@@ -34,4 +34,4 @@ host = "0.0.0.0"
 port = 9000
 
 [app]
-workspace_output_dir = "workspace_output"
+workspace_output_dir = "D:/DevMate/workspace_output"
