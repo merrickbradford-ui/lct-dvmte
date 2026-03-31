@@ -25,7 +25,11 @@ def main() -> None:
 
     client = Client(api_key=config.langsmith.langchain_api_key)
     runs = list(
-        client.list_runs(project_name=config.langsmith.langchain_project, limit=1)
+        client.list_runs(
+            project_name=config.langsmith.langchain_project,
+            limit=1,
+            is_root=True,
+        )
     )
     if not runs:
         logger.warning(
@@ -35,15 +39,21 @@ def main() -> None:
 
     run = runs[0]
     output = Path(__file__).resolve().parents[3] / "LANGSMITH_TRACE_LINK.md"
-    try:
-        share_url = client.share_run(run.id)
-    except Exception as exc:  # pragma: no cover
-        if "already shared" in str(exc).lower() and output.exists():
-            logger.warning("Run already shared; reusing existing trace link file.")
-            logger.info("Trace link already available at %s", output)
-            return
-        logger.exception("Failed to share LangSmith run.")
-        return
 
-    output.write_text(f"# Latest LangSmith Trace\n\n{share_url}\n", encoding="utf-8")
+    share_url = None
+    try:
+        share_url = client.read_run_shared_link(run.id)
+    except Exception:  # pragma: no cover
+        logger.exception("Failed to read run shared link.")
+
+    if not share_url:
+        try:
+            share_url = client.share_run(run.id)
+        except Exception:  # pragma: no cover
+            logger.exception("Failed to share LangSmith run.")
+            return
+
+    output.write_text(
+        f"# Latest LangSmith Trace\n\n{share_url}\n", encoding="utf-8"
+    )
     logger.info("Trace link exported to %s", output)
