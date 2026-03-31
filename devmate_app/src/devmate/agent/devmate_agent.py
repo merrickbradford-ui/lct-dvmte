@@ -191,29 +191,28 @@ class DevMateTemplateAgent(ReActAgent):
         rag_context: str,
         skill_context: str,
     ) -> list[Any]:
-        """Build model messages with explicit retrieved-context injection."""
-        messages: list[Any] = [SystemMessage(content=SYSTEM_PROMPT)]
+        """Build model messages with a single system prompt.
+
+        RAG context and skill guidance are appended to the system prompt
+        rather than injected as separate system messages, keeping exactly
+        one SystemMessage in the conversation at all times.
+        """
+        system_content = SYSTEM_PROMPT
         if rag_context:
-            messages.append(
-                SystemMessage(
-                    content=(
-                        "Relevant local knowledge base context retrieved for this "
-                        "request. Use it when applicable:\n\n"
-                        f"{rag_context}"
-                    )
-                )
+            system_content = (
+                f"{system_content}\n\n"
+                "--- Local knowledge base context (use when applicable) ---\n"
+                f"{rag_context}\n"
+                "--- End of local knowledge base context ---"
             )
         if skill_context:
-            messages.append(
-                SystemMessage(
-                    content=(
-                        "Relevant reusable skill guidance was found for this request. "
-                        "Adapt it to the current task instead of following it "
-                        "mechanically:\n\n"
-                        f"{skill_context}"
-                    )
-                )
+            system_content = (
+                f"{system_content}\n\n"
+                "--- Relevant skill guidance (adapt to current task) ---\n"
+                f"{skill_context}\n"
+                "--- End of skill guidance ---"
             )
+        messages: list[Any] = [SystemMessage(content=system_content)]
         messages.extend(history)
         return messages
 
