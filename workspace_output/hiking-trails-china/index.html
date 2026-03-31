@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>全国徒步路线指南</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>全国徒步路线指南</h1>
+    <p>探索中国各地的精彩徒步路线</p>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="搜索路线名称、地区或难度...">
+        <button id="searchButton">搜索</button>
+        <button id="resetButton">重置</button>
+      </div>
+      <div class="filter-options">
+        <label>
+          <select id="regionFilter">
+            <option value="">所有地区</option>
+            <option value="华北">华北</option>
+            <option value="华东">华东</option>
+            <option value="华南">华南</option>
+            <option value="华中">华中</option>
+            <option value="西南">西南</option>
+            <option value="西北">西北</option>
+            <option value="东北">东北</option>
+          </select>
+        </label>
+        <label>
+          <select id="difficultyFilter">
+            <option value="">所有难度</option>
+            <option value="简单">简单</option>
+            <option value="中等">中等</option>
+            <option value="困难">困难</option>
+          </select>
+        </label>
+        <button id="useCurrentLocation" type="button">使用我的位置</button>
+      </div>
+    </section>
+
+    <section id="map-section">
+      <div id="trail-map"></div>
+    </section>
+
+    <section id="trails-list">
+      <h2>徒步路线列表</h2>
+      <div id="trails-container"></div>
+    </section>
+
+    <section id="loading" class="hidden">
+      <p>正在加载路线数据...</p>
+    </section>
+
+    <section id="error" class="hidden">
+      <p id="error-message">加载失败，请重试。</p>
+    </section>
+
+    <section id="noResults" class="hidden">
+      <p>未找到符合条件的徒步路线，请尝试其他搜索条件。</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 全国徒步路线指南 | 探索自然，享受徒步</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

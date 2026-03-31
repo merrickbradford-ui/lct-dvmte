@@ -22,7 +22,10 @@ DevMate 是一个基于 Python 的智能开发助手项目，采用 Monorepo 结
 - `config.toml`：本地运行配置
 - `config.docker.toml`：Docker 运行配置
 
-在启动项目之前，请先确认配置文件中的各类 `api_key` 已正确填写。
+在启动项目之前，请先确认以下 `api_key` 都已正确填写：
+
+- `config.toml` / `config.docker.toml` 中的各类 `api_key`
+- `docker-compose.yml` 中 `app.environment` 下的 `LANGCHAIN_API_KEY`
 
 ## 项目如何启动
 

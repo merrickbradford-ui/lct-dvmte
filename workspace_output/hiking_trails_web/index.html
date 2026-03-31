@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>附近徒步路线</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>附近徒步路线</h1>
+    <p>探索你身边的自然步道</p>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <form id="search-form">
+        <input
+          type="text"
+          id="location-input"
+          placeholder="输入城市或地点（例如：杭州西湖）"
+          autocomplete="off"
+        />
+        <button type="submit">搜索</button>
+      </form>
+      <button id="use-current-location" type="button">使用当前位置</button>
+    </section>
+
+    <section class="map-section">
+      <div id="trail-map"></div>
+    </section>
+
+    <section class="trails-list" id="trails-list">
+      <!-- 动态填充 -->
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 徒步路线探索 | 数据来源于 OpenStreetMap</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

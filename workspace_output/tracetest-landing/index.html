@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TraceTest - 基于分布式追踪的测试平台</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="container nav-container">
+        <h1 class="logo">TraceTest</h1>
+        <ul class="nav-links">
+          <li><a href="#features">功能</a></li>
+          <li><a href="#how-it-works">原理</a></li>
+          <li><a href="#use-cases">场景</a></li>
+          <li><a href="#get-started">开始使用</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <h2>用分布式追踪构建集成与端到端测试</h2>
+        <p>无需模拟、无需桩代码，基于真实数据，在几分钟内创建深度可观测的测试。</p>
+        <a href="#get-started" class="btn primary">立即开始</a>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <h2>核心功能</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>快速创建测试</h3>
+            <p>利用 OpenTelemetry 分布式追踪，98% 更快地构建集成和端到端测试。</p>
+          </article>
+          <article class="card">
+            <h3>深度断言能力</h3>
+            <p>不仅验证响应，还能对整个调用链中的任意 span 设置断言。</p>
+          </article>
+          <article class="card">
+            <h3>CI/CD 集成</h3>
+            <p>通过 CLI 在现有流水线中运行测试，失败时附带完整追踪便于根因分析。</p>
+          </article>
+          <article class="card">
+            <h3>生产环境合成监控</h3>
+            <p>将开发/测试阶段编写的测试直接用于生产环境关键路径监控。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section bg-light">
+      <div class="container">
+        <h2>工作原理</h2>
+        <ol class="steps">
+          <li>
+            <h3>触发测试</h3>
+            <p>调用你的系统接口，TraceTest 自动捕获请求并启动追踪。</p>
+          </li>
+          <li>
+            <h3>获取完整追踪</h3>
+            <p>通过轮询算法从你现有的追踪后端（如 Jaeger、Tempo）获取完整 trace。</p>
+          </li>
+          <li>
+            <h3>执行断言</h3>
+            <p>基于响应数据和 trace 中的 span 信息，执行你定义的测试断言。</p>
+          </li>
+          <li>
+            <h3>可视化结果</h3>
+            <p>在 UI 中清晰展示测试结果、trace 可视化及断言详情。</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="use-cases" class="section">
+      <div class="container">
+        <h2>典型应用场景</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>微服务集成测试</h3>
+            <p>验证跨多个服务的业务流程是否按预期工作。</p>
+          </article>
+          <article class="card">
+            <h3>可观测性驱动开发</h3>
+            <p>在开发过程中利用 trace 数据确保服务间交互正确。</p>
+          </article>
+          <article class="card">
+            <h3>生产环境关键路径监控</h3>
+            <p>将核心用户旅程转化为持续运行的合成监控测试。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="get-started" class="section bg-light">
+      <div class="container">
+        <h2>开始使用 TraceTest</h2>
+        <p>TraceTest 是 CNCF 景观中的开源项目，完全兼容 OpenTelemetry。</p>
+        <div class="cta-buttons">
+          <a href="https://github.com/kubeshop/tracetest" target="_blank" class="btn primary">GitHub 仓库</a>
+          <a href="https://tracetest.io/docs/getting-started/" target="_blank" class="btn secondary">官方文档</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 TraceTest. 开源项目，遵循 Apache 2.0 许可证。</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

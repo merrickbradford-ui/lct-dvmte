@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trail Finder - 足迹追踪应用</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+          crossorigin=""/>
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>📍 Trail Finder</h1>
+        <p>记录您的行走轨迹，探索每一步的足迹</p>
+    </header>
+    
+    <main>
+        <div class="controls">
+            <button id="startBtn" class="btn btn-primary">
+                <span>▶</span> 开始追踪
+            </button>
+            <button id="stopBtn" class="btn btn-secondary" disabled>
+                <span>⏸</span> 暂停追踪
+            </button>
+            <button id="clearBtn" class="btn btn-danger" disabled>
+                <span>🗑</span> 清除轨迹
+            </button>
+        </div>
+        
+        <div id="statusMessage" class="status-message hidden">
+            等待位置信息...
+        </div>
+        
+        <div id="map"></div>
+        
+        <div class="status-bar">
+            <div class="status-item">
+                <h3>总距离</h3>
+                <p id="distanceValue">0.00 km</p>
+            </div>
+            <div class="status-item">
+                <h3>追踪时间</h3>
+                <p id="timeValue">00:00</p>
+            </div>
+            <div class="status-item">
+                <h3>轨迹点数</h3>
+                <p id="pointsValue">0</p>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+            crossorigin=""></script>
+    
+    <!-- 应用脚本 -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

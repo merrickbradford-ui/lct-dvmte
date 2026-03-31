@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>徒步路线探索 - 发现身边的自然美景</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>徒步路线探索</h1>
+            <p>发现身边的自然美景，开启你的户外探险之旅</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 搜索和筛选区域 -->
+        <section class="search-section">
+            <div class="search-filters">
+                <div class="filter-group">
+                    <label for="searchInput">搜索路线</label>
+                    <input type="text" id="searchInput" placeholder="输入路线名称、地点或关键词...">
+                </div>
+                <div class="filter-group">
+                    <label for="regionFilter">地区</label>
+                    <select id="regionFilter">
+                        <option value="">全部地区</option>
+                        <option value="华东">华东</option>
+                        <option value="华中">华中</option>
+                        <option value="西南">西南</option>
+                        <option value="华北">华北</option>
+                        <option value="东北">东北</option>
+                        <option value="西北">西北</option>
+                        <option value="华南">华南</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="difficultyFilter">难度</label>
+                    <select id="difficultyFilter">
+                        <option value="">全部难度</option>
+                        <option value="简单">简单</option>
+                        <option value="中等">中等</option>
+                        <option value="困难">困难</option>
+                    </select>
+                </div>
+                <div class="filter-buttons">
+                    <button id="searchButton" class="search-btn">搜索路线</button>
+                    <button id="resetButton" class="reset-btn">重置筛选</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 地图区域 -->
+        <section class="map-section">
+            <h2>路线分布地图</h2>
+            <div id="map">
+                <div style="height: 100%; display: flex; align-items: center; justify-content: center; background-color: #f0f0f0; border-radius: 8px;">
+                    <div style="text-align: center;">
+                        <i class="fas fa-map-marked-alt" style="font-size: 48px; color: #4a7c59; margin-bottom: 16px;"></i>
+                        <p style="color: #666; font-size: 16px;">地图集成区域<br><small>显示徒步路线位置分布</small></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 路线列表区域 -->
+        <section class="routes-section">
+            <h2>推荐徒步路线</h2>
+            <div id="routesContainer" class="routes-container"></div>
+            <div id="noResults" class="no-results" style="display: none;">
+                <i class="fas fa-search" style="font-size: 48px; margin-bottom: 16px; color: #ccc;"></i>
+                <p>没有找到符合条件的徒步路线，请尝试调整搜索条件。</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- 路线详情模态框 -->
+    <div id="routeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

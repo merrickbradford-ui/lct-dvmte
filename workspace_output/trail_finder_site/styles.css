@@ -1,0 +1,81 @@
+:root {
+  --primary-color: #2F4F4F;
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --accent-color: #4682b4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+main {
+  padding: 1rem;
+}
+
+#map-section {
+  margin-bottom: 2rem;
+}
+
+#map {
+  height: 300px;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+#locate-btn {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#locate-btn:hover {
+  opacity: 0.9;
+}
+
+#trails-section h2 {
+  margin-top: 0;
+}
+
+.trail-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.trail-card h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}

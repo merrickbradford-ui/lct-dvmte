@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trail Finder - 探索徒步路线</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Trail Finder</h1>
+    <p>发现附近的徒步路线</p>
+  </header>
+
+  <main>
+    <section id="map-section">
+      <div id="map"></div>
+      <button id="locate-btn">定位我的位置</button>
+    </section>
+
+    <section id="trails-section">
+      <h2>推荐路线</h2>
+      <div id="trails-container">
+        <!-- Trails will be populated by JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Trail Finder. 使用 OpenStreetMap 数据。</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
